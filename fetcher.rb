@@ -1,8 +1,8 @@
 url_array = []
 file = File.new("m3u8.m3u", "r")
 
-file.each do
-	|line| 
+file.each do |line|
+	
 	if line =~ /^[http]/
 		
 		url_string = line.split(/[\?]/)[0]
