@@ -1,6 +1,7 @@
 url_array = []
+file = File.new("m3u8.m3u", "r")
 
-File.new("m3u8.m3u", "r").each do
+file.each do
 	|line| 
 	if line =~ /^[http]/
 		
@@ -11,6 +12,8 @@ File.new("m3u8.m3u", "r").each do
 		end
 	end
 end
+
+file.close
 
 url_array.each_index do |index|
 	puts "lh-%.2i.flv | #{url_array[index]}" %index
