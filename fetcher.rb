@@ -1,5 +1,5 @@
 url_array = []
-file = File.new("m3u8.m3u", "r")
+file = File.new(ARGV[0], "r")
 
 file.each do |line|
 	
